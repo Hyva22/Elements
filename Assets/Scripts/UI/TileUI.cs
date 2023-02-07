@@ -22,7 +22,7 @@ namespace UI
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() => 
             {
-                if(tile.Player != boardUI.Board.ActivePlayer)
+                if(tile.Player == null)
                 {
                     ElementPickerUI epUI = boardUI.ElementPickerUI;
                     epUI.gameObject.SetActive(true);

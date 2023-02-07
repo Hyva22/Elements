@@ -51,7 +51,7 @@ namespace UI
             //resize Grid
             tilesGrid.constraintCount = board.Size;
 
-            //Populate grid
+            //PopulateGrid grid
             for(int i = 0; i < tiles.GetLength(0); i++)
             {
                 for (int j = 0; j < tiles.GetLength(1); j++)
