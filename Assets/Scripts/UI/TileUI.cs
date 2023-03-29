@@ -14,7 +14,7 @@ namespace UI
 
         public Tile Tile { get => tile; }
 
-        public void Set(Tile tile, BoardUI boardUI)
+        public void Set(Tile tile, BoardUI boardUI, int x, int y)
         {
             this.tile = tile;
             UpdateImages();
@@ -45,7 +45,7 @@ namespace UI
 
         private void UpdateBackground()
         {
-            backgroundImage.color = tile.Player == null ? Color.white : tile.Player.Color;
+            backgroundImage.color = tile.Player == null ? GameData.DefaultColor : GameManager.Insatnce.Match.GetColor(tile.Player);
         }
 
         private void UpdateForeground()

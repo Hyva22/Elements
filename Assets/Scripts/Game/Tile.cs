@@ -1,8 +1,12 @@
+using System;
+using UnityEngine;
+
+[Serializable]
 public class Tile
 {
-    private Player player;
-    private Element element;
-    private int x, y;
+    [SerializeField] private Player player;
+    [SerializeField] private Element element;
+    [SerializeField] private int x, y;
 
     public Player Player { get => player; set => player = value; }
     public Element Element { get => element; set => element = value; }

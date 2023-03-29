@@ -30,9 +30,10 @@ namespace UI
 
         private void Set(Element element)
         {
-            tileUI.Set(board.ActivePlayer, element);
-            board.CyclePlayer();
-            board.UpdateScore();
+            Match match = GameManager.Insatnce.Match;
+            tileUI.Set(match.ActivePlayer, element);
+            match.UpdateScore();
+            match.CyclePlayer();
             gameObject.SetActive(false);
         }
     }

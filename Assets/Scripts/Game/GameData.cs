@@ -1,15 +1,14 @@
-using Mono.Cecil;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
     [SerializeField] private Sprite fire, earth, wind, water, order;
+    [SerializeField] private Color defaultColor;
     [SerializeField] private List<Color> colorList;
 
     private static GameData instance;
+    public static Color DefaultColor { get => instance.defaultColor; }
 
     public static Dictionary<Element, Element> winOrder = new Dictionary<Element, Element>()
     {

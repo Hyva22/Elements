@@ -1,18 +1,29 @@
+using System;
 using System.Drawing;
 using UnityEngine;
 
+[Serializable]
 public class Player
 {
-    private int id, points;
-    private UnityEngine.Color color;
+    [SerializeField] private int id;
+    [SerializeField] private string name;
+    //private int points;
+    //private UnityEngine.Color color;
 
     public int ID { get => id; }
-    public int Points { get => points; set => points = value; }
-    public UnityEngine.Color Color { get => color; }
+    public string Name { get => name; }
+    //public int Points { get => points; set => points = value; }
+    //public UnityEngine.Color Color { get => color; }
 
-    public Player(int id, UnityEngine.Color color)
+    //public Player(int id, UnityEngine.Color color)
+    //{
+    //    this.id = id;
+    //    this.color = color;
+    //}
+
+    public Player(int id, string name)
     {
         this.id = id;
-        this.color = color;
+        this.name = name;
     }
 }
