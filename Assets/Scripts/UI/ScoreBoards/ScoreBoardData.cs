@@ -10,6 +10,7 @@ public class ScoreBoardData : MonoBehaviour
 
     private Player player;
 
+
     public void Display(Player player)
     {
         this.player = player;
